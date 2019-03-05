@@ -1,0 +1,3 @@
+[submodule "pace5000"]
+	path = pace5000
+	url = https://github.com/icshwi/pace5000
