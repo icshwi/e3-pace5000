@@ -49,10 +49,10 @@ include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 ##EXCLUDE_ARCHS = linux-ppc64e6500
 
 
-# APP:=calcApp
-# APPDB:=$(APP)/Db
-# APPSRC:=$(APP)/src
-
+APP:=pace5000App
+APPDB:=$(APP)/Db
+APPSRC:=$(APP)/src
+APPPROTO:=$(APP)/protocol
 
 # USR_INCLUDES += -I$(where_am_I)$(APPSRC)
 
@@ -63,9 +63,9 @@ include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 # USR_CPPFLAGS += -Wno-unused-function
 # USR_CPPFLAGS += -Wno-unused-but-set-variable
 
+TEMPLATES += $(wildcard $(APPDB)/*.db)
 # TEMPLATES += $(wildcard $(APPDB)/*.db)
-# TEMPLATES += $(wildcard $(APPDB)/*.db)
-# TEMPLATES += $(wildcard $(APPDB)/*.proto)
+TEMPLATES += $(wildcard $(APPPROTO)/*.proto)
 # TEMPLATES += $(wildcard $(APPDB)/*.template)
 
 
