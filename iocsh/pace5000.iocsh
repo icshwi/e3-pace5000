@@ -1,0 +1,7 @@
+# ### pace5000 iocsh ###
+# ######################
+#
+# P 		- Required, system level
+# R		- Required, device level
+
+dbLoadRecords("pace5000.db", "P=$(SYS), R=$(DEV), PORT=$(PORT)")
